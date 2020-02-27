@@ -129,6 +129,17 @@
         }
     }
 
+    table {
+        width: 200%;
+    }
+
+    @media (min-width: $mobile_width) {
+        table {
+            width: 100%;
+
+        }
+    }
+
 
 }
 
@@ -136,7 +147,7 @@
 
 
 table {
-    width: 100%;
+
     margin: 0 0 $padding;
 
     input,
@@ -286,7 +297,18 @@ $icon_size: $font_size;
     }
 
 
-    &.photo_grid_item_inverse {
-        flex-direction: row-reverse;
+
+
+
+    @media (max-width: $mobile_width) {
+        &.photo_grid_item_inverse_mobile {
+            flex-direction: row-reverse;
+        }
+    }
+
+    @media (min-width: $mobile_width) {
+        &.photo_grid_item_inverse {
+            flex-direction: row-reverse;
+        }
     }
 }

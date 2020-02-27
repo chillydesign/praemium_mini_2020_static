@@ -38,17 +38,20 @@ section#welcome {
         padding-top: 150px;
         margin: 0;
 
-        &:after,
-        &:before {
+        @media (min-width: $mobile_width) {
 
-            content: "";
-            width: 30px;
-            margin: 0 $padding;
-            border-top: $half_padding double white;
+            &:after,
+            &:before {
 
-            display: inline-block;
-            position: relative;
-            top: -5px;
+                content: "";
+                width: 30px;
+                margin: 0 $padding;
+                border-top: $half_padding double white;
+
+                display: inline-block;
+                position: relative;
+                top: -5px;
+            }
         }
     }
 
@@ -100,19 +103,29 @@ section.large_p {
 
 
 section#intro {
-    background: url('../images/green-logo.jpg') no-repeat 0 -130%;
+    background: url('../images/green-logo.jpg') no-repeat 0 bottom;
     background-size: 430px;
 }
 
 section#grid {
     padding-bottom: 0;
     padding-top: 0;
+
+    .columns {
+        margin-bottom: 0;
+
+    }
 }
 
 section#map_grid {
     padding-bottom: 0;
     padding-top: 0;
     background-color: $blue;
+
+    .columns {
+        margin-bottom: 0;
+
+    }
 
     #map_container {
         position: absolute;
