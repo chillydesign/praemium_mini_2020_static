@@ -73,7 +73,7 @@ a.button,
 input[type="submit"],
 button {
     display: inline-block;
-    padding: $half_padding $double_padding;
+    padding: $padding $double_padding;
     font-size: $font_size;
     border: 0;
     border-radius: $border_radius;
@@ -239,5 +239,6 @@ form {
         color: white;
         border: 0;
         outline: none;
+        padding: $half_padding $double_padding;
     }
 }
