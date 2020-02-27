@@ -58,6 +58,10 @@
 
 
 
+    .column {
+        margin: 0;
+    }
+
 
     &.column_half {
         @media(min-width: $mobile_width) {
