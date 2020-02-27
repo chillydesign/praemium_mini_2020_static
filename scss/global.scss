@@ -39,11 +39,12 @@ section#welcome {
     }
 
     h1 {
-
-        padding-top: 150px;
-        margin: 0;
-        background: url('../images/townjouses-du-cedre-logo.png') no-repeat top center;
+        padding-top: 50px;
+        // padding-top: 150px;
+        // background: url('../images/townjouses-du-cedre-logo.png') no-repeat top center;
         background-size: 100px;
+        margin: 0;
+
 
         @media (min-width: $mobile_width) {
 
@@ -133,7 +134,7 @@ section.large_p {
 
 
 section#intro {
-    background: url('../images/green-logo.jpg') no-repeat 0 bottom;
+    background: url('../images/green-logo.jpg') no-repeat 0 100px;
     background-size: 430px;
 }
 

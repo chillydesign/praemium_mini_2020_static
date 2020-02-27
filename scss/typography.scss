@@ -79,6 +79,7 @@ button {
     border-radius: $border_radius;
     margin: $padding 0;
     font-weight: bold;
+    transition: all 0.3s;
 
     cursor: pointer;
 
@@ -139,6 +140,12 @@ button {
     &:hover {
         background: $primary_color;
         color: white;
+        transform: scale(1.03);
+    }
+
+    &:active {
+        position: relative;
+        top: 1px;
     }
 }
 
