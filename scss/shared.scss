@@ -1,0 +1,292 @@
+.container {
+    padding-right: $padding;
+    padding-left: $padding;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: $mobile_width) {
+    .container {
+        width: 750px;
+    }
+
+}
+
+@media (min-width: $tablet_width) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: $desktop_width) {
+    .container {
+        width: 1170px;
+    }
+}
+
+
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0 0 $padding;
+
+    &.columns_no_margin {
+        .column {
+            margin: 0;
+        }
+    }
+
+    @media(min-width: $mobile_width) {
+        margin-bottom: 0;
+        flex-wrap: nowrap;
+
+        &.columns_wrap {
+            flex-wrap: wrap;
+        }
+    }
+
+}
+
+// end of columns
+
+.column {
+    flex: 1 auto;
+    margin: 0 $half_padding;
+    width: 100%;
+
+
+
+
+    &.column_half {
+        @media(min-width: $mobile_width) {
+            width: #{100% * 1 / 2};
+        }
+    }
+
+
+
+    &.column_small {
+        @media(min-width: $mobile_width) {
+            width: #{100% * 1 / 4};
+        }
+
+    }
+
+    &.column_large {
+        @media(min-width: $mobile_width) {
+            width: #{100% * 3 /4 };
+        }
+
+    }
+}
+
+// end of column
+
+
+.box {
+    padding: $padding;
+    background: white;
+    border-radius: $border_radius;
+
+    margin: 0 0 #{$padding };
+    min-height: 250px;
+
+    &.box_dark {
+        background-color: $font_color;
+        color: white;
+    }
+
+    &.box_light {
+        background-color: $light_grey;
+    }
+
+    &.box_primary {
+        background-color: $primary_color;
+    }
+
+
+}
+
+
+
+
+.table_container {
+    margin: 0 0;
+
+    overflow-x: scroll;
+
+    @media(min-width: $mobile_width) {
+        overflow-x: initial;
+    }
+
+    &.overflow_visible {
+        overflow-x: visible;
+
+        @media(min-width: $mobile_width) {
+            overflow-x: visible;
+        }
+    }
+
+
+}
+
+
+
+
+table {
+    width: 100%;
+    margin: 0 0 $padding;
+
+    input,
+    button,
+    textarea,
+    label {
+        font-size: inherit;
+    }
+
+}
+
+th,
+td {
+    text-align: left;
+    font-size: $font_size;
+    padding:#{$padding * 0.5};
+    line-height: $line_height;
+
+    &.break_word {
+        word-break: break-all;
+    }
+
+    li {
+        font-size: inherit;
+    }
+}
+
+th {
+    font-weight: bold;
+    background-color: $primary_color;
+    color: white;
+
+
+}
+
+tr {
+    &:nth-child(2n + 1) {
+        td {
+            background: $grey9;
+        }
+    }
+
+
+}
+
+
+
+$icon_size: $font_size;
+
+.icon {
+    display: inline-block;
+    text-indent: -9999px;
+    text-align: left;
+    width: $icon_size;
+    height: $icon_size;
+    background-repeat: no-repeat;
+    background-size: #{$icon_size * 0.8};
+    background-position: center center;
+    opacity: 0.8;
+    transition: all 0.3;
+
+    &:hover {
+        opacity: 1;
+        transform: scale(1.03);
+    }
+
+
+
+    &.icon_file {
+        background-image: url('../images/file.svg');
+    }
+
+
+
+}
+
+
+
+.photo_grid_item {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    background-color: $grey8;
+
+
+    .grid_item_inner {
+        width: 50%;
+        padding: 25%;
+
+
+        position: relative;
+
+        &.grid_item_inner_full {
+            width: 100%;
+            padding: 50%;
+        }
+    }
+
+    .photo_container {
+        background: no-repeat center center;
+        background-size: cover;
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            min-height: 100%;
+            object-fit: cover;
+        }
+
+    }
+
+    .text_container {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: $padding;
+
+
+        h3 {
+            padding: 0 0 5px;
+            margin: 0;
+        }
+
+        h4 {
+            font-style: italic;
+            padding: 0 0 10px;
+            color: $grey3;
+            font-size: $font_size;
+        }
+
+    }
+
+    &.photo_grid_item_primary {
+        background-color: $light_primary_color;
+
+        .text_container {
+
+            h4 {
+                color: scale-color($primary_color, $lightness: -25%);
+
+            }
+        }
+    }
+
+
+    &.photo_grid_item_inverse {
+        flex-direction: row-reverse;
+    }
+}

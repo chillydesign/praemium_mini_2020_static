@@ -1,0 +1,225 @@
+@import "variables";
+@import "reset";
+@import "typography";
+@import "shared";
+
+
+
+body {
+    background: $background_color;
+    color: $font_color;
+    font-family: $font_stack;
+    font-weight: normal;
+    font-size: 62.5%;
+}
+
+
+
+$sectiom_padding: 80px;
+
+section {
+    padding: $sectiom_padding 0;
+    position: relative;
+
+    h2 {
+        text-align: center;
+    }
+}
+
+section#welcome {
+    background: url('../images/chemin2.jpg') no-repeat center center;
+    padding-bottom: #{($sectiom_padding + 100px)};
+    background-size: cover;
+    text-align: center;
+    color: white;
+
+    h1 {
+
+        padding-top: 150px;
+        margin: 0;
+
+        &:after,
+        &:before {
+
+            content: "";
+            width: 30px;
+            margin: 0 $padding;
+            border-top: $half_padding double white;
+
+            display: inline-block;
+            position: relative;
+            top: -5px;
+        }
+    }
+
+    h2,
+    p {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 500px;
+    }
+
+    h2 {
+
+        padding-bottom: 20px;
+    }
+
+    p {}
+
+
+
+    svg {
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        height: 120px;
+
+        .st0 {
+            fill: #FFFFFF;
+        }
+
+        .st1 {
+            opacity: 0.2;
+            fill: #FFFFFF;
+        }
+    }
+}
+
+
+section.large_p {
+    text-align: center;
+
+    p {
+        font-size: #{ $font_size * 1.5};
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+section#intro {
+    background: url('../images/green-logo.jpg') no-repeat 0 -130%;
+    background-size: 430px;
+}
+
+section#grid {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+section#map_grid {
+    padding-bottom: 0;
+    padding-top: 0;
+    background-color: $blue;
+
+    #map_container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+section#table {}
+
+section#visiter {}
+
+section#contact {
+
+    background: $light_primary_color url('../images/white-logo.png') no-repeat right 150%;
+    background-size: 400px;
+    padding-top: #{($sectiom_padding + 100px)};
+
+
+    h2 {
+        text-align: left;
+        font-size: #{ $font_size * 3}; // like an h1
+    }
+
+    p {
+        font-size: #{ $font_size * 1.5};
+    }
+
+    .contact_box {
+
+        padding-left: 100px;
+        background: url('../images/contact.svg') no-repeat top left;
+        background-size: 80px;
+        margin-bottom: $double_padding;
+
+        &.address_box {
+            background-image: url('../images/marker.svg');
+        }
+
+        &.form_box {
+            background-image: url('../images/mail.svg');
+        }
+
+    }
+
+
+    #interest_person_check {
+        font-weight: bold;
+        font-size: $font_size;
+        margin: 0 $half_padding;
+    }
+
+    .person_chooser {
+        margin: 0px 3px;
+        padding: 0px $half_padding;
+        color: $font_color;
+
+        &:before {
+            transition: all 0.3s;
+            content: '';
+            display: inline-block;
+            height: 13px;
+            width: 13px;
+            position: relative;
+            top: 1px;
+            margin-right: 5px;
+            border: 1px solid $font_color;
+        }
+
+        &:first-child {
+            &:before {
+                background: $font_color;
+            }
+        }
+
+        &:hover {
+            &:before {
+                background: $grey3;
+            }
+        }
+
+
+
+    }
+
+    form {
+        input[type="submit"] {
+            text-align: right;
+        }
+    }
+
+    svg {
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        height: 120px;
+
+        .st0 {
+            fill: #FFFFFF;
+        }
+
+        .st1 {
+            opacity: 0.2;
+            fill: #FFFFFF;
+        }
+    }
+}

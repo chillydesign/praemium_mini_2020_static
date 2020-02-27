@@ -1,0 +1,24 @@
+{
+  "name": "cardsite",
+  "version": "1.0.0",
+  "description": "Website looking like a card a la dribble",
+  "main": "index.html",
+  "scripts": {
+    "test": "say hello"
+  },
+  "browserslist": [
+    "last 3 versions"
+  ],
+  "keywords": [
+    "webfactor"
+  ],
+  "author": "Charles Harvey",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-minify": "^3.0.15",
+    "gulp-sass": "^4.0.1",
+    "gulp-watch": "^5.0.1"
+  }
+}

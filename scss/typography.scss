@@ -1,0 +1,243 @@
+h1 {
+    font-size: #{ $font_size * 3};
+    margin: 0 0 $padding;
+    font-weight: bold;
+    line-height: $line_height;
+
+}
+
+h2 {
+    font-size: #{ $font_size * 2};
+    margin: 0 0 $padding;
+    font-weight: bold;
+    line-height: $line_height;
+}
+
+h3 {
+    font-size: #{ $font_size * 1.35};
+    margin: 0 0 $padding;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: #{ $font_size * 1.2};
+    margin: 0 0 5px;
+    font-weight: bold;
+}
+
+p,
+li {
+    font-size: $font_size;
+    padding: 0 0 20px;
+    line-height: $line_height;
+}
+
+li {
+    padding: 0 0 5px;
+}
+
+ul,
+ol {
+    margin: 0 0 $padding $padding;
+}
+
+ul {
+    list-style: circle;
+
+}
+
+ol {
+    list-style: decimal;
+}
+
+
+a {
+    text-decoration: none;
+    color: $primary_color;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:visited {
+        color: $primary_color;
+    }
+
+    &:active {
+        transform: translateY(1px);
+    }
+
+
+
+}
+
+a.button,
+input[type="submit"],
+button {
+    display: inline-block;
+    padding: $half_padding $double_padding;
+    font-size: $font_size;
+    border: 0;
+    border-radius: $border_radius;
+    margin: $padding 0;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    &.button_primary {
+        background-color: $primary_color;
+        color: white;
+
+        &:hover {
+            background-color: scale-color($primary_color, $lightness: -20%);
+        }
+    }
+
+    &.button_grey {
+        background-color: $grey3;
+        color: white;
+        border-color: transparent;
+
+        &:hover {
+            background-color: $grey5;
+        }
+    }
+
+    &.button_success {
+        background-color: $green;
+        color: white;
+
+        &:hover {
+            background-color: scale-color($green, $lightness: -20%);
+        }
+    }
+
+    &.button_danger {
+        background-color: $red;
+        color: white;
+
+        &:hover {
+            background-color: scale-color($red, $lightness: -20%);
+        }
+    }
+
+    &.button_block {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+
+    &.button_small {
+        padding: $half_padding;
+        font-size: #{$font_size * 0.75};
+    }
+
+    &.button_no_margin {
+        margin: 0;
+    }
+
+
+    &:hover {
+        background: $primary_color;
+        color: white;
+    }
+}
+
+// end of a .button
+
+.button_group {
+    margin: $padding 0;
+
+    a.button {
+        margin: 0;
+        border-radius: 0;
+        border-left: 0;
+
+        &:first-child {
+            // border-radius: $border_radius  0 0 $border_radius;
+            border-top-left-radius: $border_radius;
+            border-bottom-left-radius: $border_radius;
+            border-left: 1px solid $grey5;
+        }
+
+        &:last-child {
+            // border-radius: 0 $border_radius $border_radius 0;
+            border-top-right-radius: $border_radius;
+            border-bottom-right-radius: $border_radius;
+        }
+    }
+}
+
+
+form {
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    textarea,
+    select {
+        background: none;
+        border: none;
+        appearance: none;
+        padding: 0 $half_padding;
+        font-size: $font_size;
+        border-bottom: 1px dashed $font_color;
+        display: inline-block;
+
+    }
+
+    select {
+        width: 100%;
+        font-weight: bold;
+    }
+
+    input {}
+
+
+    textarea {
+        border: 1px dashed $font_color;
+        height: 150px;
+        padding: $half_padding
+    }
+
+    label {
+        display: inline-block;
+        font-weight: bold;
+        padding: 0 5px 0 0;
+        position: relative;
+        top: 4px;
+        font-size: $font_size;
+        // min-width: 90px;
+    }
+
+    .field {
+        padding: 0 0 $padding 0;
+        overflow: hidden;
+
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+
+        label {
+            // flex: 1 auto;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        textarea {
+            flex: 1 auto;
+            width: 100%;
+
+
+        }
+
+    }
+
+    button,
+    input[type="submit"] {
+        background-color: $primary_color;
+        color: white;
+        border: 0;
+        outline: none;
+    }
+}
