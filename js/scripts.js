@@ -1,7 +1,7 @@
 var locations = [
-    [23, 34, 'a title here'],
-    [33, 4, 'a title here'],
-    [53, 14, 'a title here'],
+    [46.2043028,6.1502206, 'a title here'],
+    [46.205305, 6.1341243, 'a title here'],
+    [46.198869, 6.1482608, 'a title here'],
 ]
 
 var map_container = document.getElementById('map_container');
