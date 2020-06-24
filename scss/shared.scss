@@ -317,11 +317,21 @@ $icon_size: $font_size;
     }
 }
 
+@keyframes logoAppear {
+    from {
+        opacity: 0;
+
+    }
+
+    to {
+        opacity: 1;
+    }
+}
 
 @keyframes starAppear {
     from {
         opacity: 0;
-        transform: translateY(20px) translateX(-20px);
+        transform: translateY(40px) translateX(-40px);
 
     }
 
@@ -331,41 +341,58 @@ $icon_size: $font_size;
     }
 }
 
+$log_an_start: 5s;
+
 .logo_container {
     position: relative;
-    height: 150px;
+    // height: 150px;
     width: 70px;
     margin: auto;
     display: flex;
     justify-content: center;
+    padding: 30px 0 200px;
+    // opacity: 0;
+    // animation: logoAppear 1s forwards;
+    // animation-delay: $log_an_start;
 
     $ratio: 1.9; // 595px / 313px;
-    $logo_svg_height: 200px;
+    $logo_svg_height: 300px;
+
+    // $g: #A89331;
+    // $h: #2B2523;
 
     svg {
-        height: $logo_svg_height;
-        min-height: $logo_svg_height;
-        width: #{$logo_svg_height * $ratio};
+
         min-width: #{$logo_svg_height * $ratio};
+        min-height: $logo_svg_height;
+        // width: #{$logo_svg_height * $ratio};
+        // height: $logo_svg_height;
+        // max-width: 100%;
+        // max-height: 600px;
 
         path.svg_star {
-            animation: starAppear 10s forwards;
+            animation: starAppear 5s forwards;
             opacity: 0;
+            animation-delay: $log_an_start;
+            position: relative;
+            z-index: 1000;
+
 
             &.star_0 {
-                animation-delay: 0s
+                animation-delay: #{$log_an_start * 1.1};
             }
 
             &.star_1 {
-                animation-delay: 2s
+                animation-delay: #{$log_an_start * 1.2};
+                // animation-duration: 11s;
             }
 
             &.star_2 {
-                animation-delay: 4s
+                animation-delay: #{$log_an_start * 1.3};
             }
 
-            &.star_2 {
-                animation-delay: 6s
+            &.star_3 {
+                animation-delay: #{$log_an_start * 1.4};
             }
         }
     }
