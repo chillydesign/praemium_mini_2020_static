@@ -170,14 +170,18 @@ section#map_grid {
 
     }
 
+    $map_pos: top right;
+
     #map_container {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: url('../images/map/planbase1.jpg') no-repeat top center $light_grey;
+        background: url('../images/map/planbase1.jpg') no-repeat $map_pos $light_grey;
         background-size: cover;
+
+
 
         .layer {
             position: absolute;
@@ -185,7 +189,7 @@ section#map_grid {
             left: 0;
             width: 100%;
             height: 100%;
-            background: no-repeat top center;
+            background: no-repeat $map_pos;
             background-size: cover;
             z-index: 100;
 
