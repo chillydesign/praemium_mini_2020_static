@@ -372,7 +372,7 @@ $icon_size: $font_size;
     }
 }
 
-$log_an_start: 5s;
+$log_an_start: 2s;
 
 .logo_container {
     position: relative;
@@ -413,16 +413,16 @@ $log_an_start: 5s;
             }
 
             &.star_1 {
-                animation-delay: #{$log_an_start * 1.2};
+                animation-delay: #{$log_an_start * 1.3};
                 // animation-duration: 11s;
             }
 
             &.star_2 {
-                animation-delay: #{$log_an_start * 1.3};
+                animation-delay: #{$log_an_start * 1.45};
             }
 
             &.star_3 {
-                animation-delay: #{$log_an_start * 1.4};
+                animation-delay: #{$log_an_start * 1.7};
             }
         }
     }
