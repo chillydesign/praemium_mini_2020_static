@@ -1,5 +1,5 @@
 var locations = [
-    [46.2043028,6.1502206, 'a title here'],
+    [46.2043028, 6.1502206, 'a title here'],
     [46.205305, 6.1341243, 'a title here'],
     [46.198869, 6.1482608, 'a title here'],
 ]
@@ -44,3 +44,10 @@ for (i = 0; i < locations.length; i++) {
 if (locations.length > 1) {
     map.fitBounds(bounds);
 }
+
+$(document).ready(function () {
+    // $(".slider").slick({
+    //     infinite: true,
+    //     slidesToShow: 3,
+    // });
+});

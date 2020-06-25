@@ -1,66 +1,82 @@
-$primary_color: #5da369;
-$secondary_color: #5d87a3;
+    $gold: #A89331;
+    $brown: #2B2523;
 
-$green: $primary_color;
-$red: #ca5252;
-$blue: $secondary_color;
+    $primary_color: $gold;
+    $secondary_color: #5d87a3;
 
-
-$light_primary_color: scale-color($primary_color, $lightness: +35%);
-
-$grey0: scale-color($primary_color, $lightness: -90%, $saturation: -90%);
-$grey1: scale-color($primary_color, $lightness: -70%, $saturation: -90%);
-$grey2: scale-color($primary_color, $lightness: -50%, $saturation: -90%);
-$grey3: scale-color($primary_color, $lightness: -30%, $saturation: -90%);
-$grey4: scale-color($primary_color, $lightness: -10%, $saturation: -90%);
-$grey5: scale-color($primary_color, $lightness: +10%, $saturation: -90%);
-$grey6: scale-color($primary_color, $lightness: +30%, $saturation: -90%);
-$grey7: scale-color($primary_color, $lightness: +50%, $saturation: -90%);
-$grey8: scale-color($primary_color, $lightness: +90%, $saturation: -90%);
-$grey9: scale-color($primary_color, $lightness: +98%, $saturation: -90%);
+    $green: $primary_color;
+    $red: #ca5252;
+    $blue: $secondary_color;
 
 
-$background_color: #fff;
-$card_color: #fff;
+    $light_primary_color: scale-color($primary_color, $lightness: +35%);
+
+    $grey0: scale-color($primary_color, $lightness: -90%, $saturation: -90%);
+    $grey1: scale-color($primary_color, $lightness: -70%, $saturation: -90%);
+    $grey2: scale-color($primary_color, $lightness: -50%, $saturation: -90%);
+    $grey3: scale-color($primary_color, $lightness: -30%, $saturation: -90%);
+    $grey4: scale-color($primary_color, $lightness: -10%, $saturation: -90%);
+    $grey5: scale-color($primary_color, $lightness: +10%, $saturation: -90%);
+    $grey6: scale-color($primary_color, $lightness: +30%, $saturation: -90%);
+    $grey7: scale-color($primary_color, $lightness: +50%, $saturation: -90%);
+    $grey8: scale-color($primary_color, $lightness: +90%, $saturation: -90%);
+    $grey9: scale-color($primary_color, $lightness: +98%, $saturation: -90%);
 
 
-$light_grey: #f2f2f2;
+    $background_color: #fff;
+    $card_color: #fff;
 
 
-$padding: 21px;
-$double_padding: #{$padding * 2};
-$half_padding: #{$padding * 0.5};
+    $light_grey: #f2f2f2;
 
 
-$border_radius: 3px;
-
-$font_color: #222;
-$font_size: 1.4em;
-$line_height: 160%;
-$font_stack: 'Lato',
-sans-serif;
-
-$mobile_width: 768px;
-$tablet_width: 992px;
-$desktop_width: 1200px;
+    $padding: 21px;
+    $double_padding: #{$padding * 2};
+    $half_padding: #{$padding * 0.5};
 
 
-@keyframes fadeIn {
-    from {
-        opacity: 0
+    $border_radius: 3px;
+
+    $font_color: #222;
+    $font_size: 1.4em;
+    $line_height: 160%;
+    $font_stack: -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
+
+    $heading_font_stack: 'Playfair Display',
+    georgia,
+    times,
+    serif;
+
+    $mobile_width: 768px;
+    $tablet_width: 992px;
+    $desktop_width: 1200px;
+
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0
+        }
+
+        to {
+            opacity: 1
+        }
     }
 
-    to {
-        opacity: 1
-    }
-}
+    @keyframes fadeOut {
+        from {
+            opacity: 1
+        }
 
-@keyframes fadeOut {
-    from {
-        opacity: 1
+        to {
+            opacity: 0
+        }
     }
-
-    to {
-        opacity: 0
-    }
-}

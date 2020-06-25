@@ -248,6 +248,33 @@ $icon_size: $font_size;
             width: 100%;
             padding: 50%;
         }
+
+
+        &:hover {
+            cursor: pointer;
+
+            a.readmore {
+                opacity: 1;
+            }
+        }
+
+        a.readmore {
+            display: none;
+            opacity: 0.5;
+            position: absolute;
+            bottom: 10px;
+            width: 80%;
+            left: 10%;
+            padding: 15px 10px;
+            background-color: $primary_color;
+            z-index: 100;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.5em;
+            text-transform: uppercase;
+
+        }
     }
 
     .photo_container {
@@ -272,10 +299,12 @@ $icon_size: $font_size;
         top: 0;
         left: 0;
         padding: $padding;
+        height: 100%;
 
+        overflow-y: scroll;
 
         h3 {
-            padding: 0 0 5px;
+            padding: 0 0 10px;
             margin: 0;
         }
 
@@ -283,8 +312,10 @@ $icon_size: $font_size;
             font-style: italic;
             padding: 0 0 10px;
             color: $grey3;
-            font-size: $font_size;
+            // font-size: $font_size;
         }
+
+
 
     }
 
@@ -358,8 +389,7 @@ $log_an_start: 5s;
     $ratio: 1.9; // 595px / 313px;
     $logo_svg_height: 270px;
 
-    // $g: #A89331;
-    // $h: #2B2523;
+
 
     svg {
 
