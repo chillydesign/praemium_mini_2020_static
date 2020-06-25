@@ -1,4 +1,5 @@
 var map_controls = document.getElementsByClassName('map_control');
+var layers = document.getElementsByClassName('layer');
 for (let i = 0; i < map_controls.length; i++) {
     const map_control = map_controls[i];
     map_control.addEventListener('click', function (e) {
@@ -7,8 +8,22 @@ for (let i = 0; i < map_controls.length; i++) {
         const layerid = (target.dataset.layer);
         if (layerid) {
             const layer = document.getElementById(layerid);
-            layer.classList.toggle('invisible');
-            target.classList.toggle('toggled');
+            for (let l = 0; l < layers.length; l++) {
+                if (layers[l] === layer) {
+                    layers[l].classList.remove('invisible');
+                } else {
+                    layers[l].classList.add('invisible');
+                }
+            }
+            for (let m = 0; m < map_controls.length; m++) {
+                if (map_controls[m] === target) {
+                    map_controls[m].classList.add('toggled');
+                } else {
+                    map_controls[m].classList.remove('toggled');
+                }
+            }
+
+
         }
     })
 
